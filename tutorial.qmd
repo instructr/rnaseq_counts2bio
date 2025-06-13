@@ -98,19 +98,34 @@ From now on, each command described in the course will be added to this script.
 
 ```{r load_packages, eval=TRUE, message=FALSE, warning=FALSE}
 
-# # Install the required packages if not already installed
-# install.packages(c("pak"))
-# 
-# pak::pkg_install(c("BiocManager", "remotes", "here", "tidyverse",        
-# "DESeq2", "pheatmap", "RColorBrewer", "ggrepel", "clusterProfiler",
-# "enrichplot", "org.Mm.eg.db", "patchwork", "ComplexHeatmap"
-# ))
-# 
-# # Install the course data package
-# pak::pak("patterninstitute/OSD758")
+#---------------------------------------------------------
+# Install the required packages (uncomment to install)
+#---------------------------------------------------------
 
+# # First install the package installer pak: it can install R packages from:
+# # CRAN, Bioconductor, GitHub, URLs, git repositories, local files and directories.
+#   install.packages(c("pak"))
+# # Use pak to install the remaining packages required
+#   pak::pkg_install("BiocManager")
+#   pak::pkg_install("remotes")
+#   pak::pkg_install("here")
+#   pak::pkg_install("tidyverse")
+#   pak::pkg_install("DESeq2")
+#   pak::pkg_install("pheatmap")
+#   pak::pkg_install("RColorBrewer")
+#   pak::pkg_install("ggrepel")
+#   pak::pkg_install("clusterProfiler")
+#   pak::pkg_install("enrichplot")
+#   pak::pkg_install("org.Mm.eg.db")
+#   pak::pkg_install("patchwork")
+#   pak::pkg_install("ComplexHeatmap")
+# # Install the data package containing tidy RNAseq data for the course
+#   pak::pkg_install("patterninstitute/OSD758")
 
+  
+#---------------
 # Load packages
+#---------------
 library("here")            # package to find your current working directory
 library("tidyverse")       # packages for data manipulation and visualization
 library("DESeq2")          # differential expression analysis
@@ -120,17 +135,16 @@ library("ggrepel")         # repel overlapping text labels in ggplot2 plots
 library("clusterProfiler") # for enrichment analysis
 library("enrichplot")      # to draw functional enrichment results
 library("org.Mm.eg.db")    # mouse gene annotation database
-library("patchwork")         # combining multiple plots
+library("patchwork")       # combining multiple plots
 library("ComplexHeatmap")  # to draw heatmaps
+library(OSD758)            # Package containing the data
 
-# Install and load package containing the data
-library(OSD758)
 
-# Gene expression in Counts
+## Load Gene expression in Counts
 raw_counts <- OSD758::gene_expression(format = "wide", only_expressed_genes = TRUE) 
 # View(raw_counts)
 
-# Samples metadata
+## Load Samples metadata
 samples <- OSD758::samples()
 # View(samples)
 
