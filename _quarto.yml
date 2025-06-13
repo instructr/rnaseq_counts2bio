@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "RNA-seq | From Counts 2 Biological Insights"
+  navbar:
+    search: true
+    tools:
+      - icon: house-heart-fill
+        menu:
+          - text: Universidade do Algarve
+            url: https://www.ualg.pt/  
+    left:
+      - href: index.qmd
+        text: "Home"
+      - text: "Introduction"
+        menu:
+          - intro.qmd
+      - text: "Tutorial"
+        menu:
+          - tutorial.qmd
+      - text: "Extras"
+        menu:
+          - contact_me.qmd
+          
+  back-to-top-navigation: true
+  page-footer: 
+    left: "Copyright 2025, Isabel Duarte" 
+    right: 
+      - icon: github
+        href: https://github.com/instructr
+    background: light
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    code-fold: show
+    code-summary: "Code"
+    fig-width: 12
+    fig-height: 6
+    out.width: "100%"
+    code-overflow: wrap
+
+editor: source
+
+
+
+

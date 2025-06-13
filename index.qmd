@@ -1,0 +1,28 @@
+---
+title: "RNA-seq | From Counts 2 Biological Insights"
+---
+
+::: {layout-ncol="1"}
+![Last update \| June 2025](figs/rna2biology.png){width="75%"}
+
+## RNA-seq Analysis Crash Course
+
+Welcome! This crash course walks you through RNA-seq data analysis in R: From raw count matrices to functional interpretation of differentially expressed genes.
+
+#### Learning Objectives
+
+1.  Perform quality control of the count data.
+2.  Identify the R commands needed to run a differential expression analysis using `DESeq2`.
+3.  Visualize the DE results.
+4.  Perform functional enrichment of the DE genes.
+5.  Visualize functionally enriched categories.
+
+#### References
+
+Attribution | These course materials are freely adapted from a combination between the following resources:
+
+  - *nf-core RNA-seq* tutorial: [nf-core/rnaseq tutorial](https://nf-co.re/rnaseq/3.18.0/docs/usage/deanalysis/de_rstudio)
+  - *The Carpentries Incubator* guided tutorial: [RNA-seq analysis with Bioconductor](https://carpentries-incubator.github.io/bioc-rnaseq/)
+  - *The Harvard Chan Bioinformatics Core* tutorial: [Differential Gene Expression Analysis (bulk RNA-seq)](https://hbctraining.github.io/Intro-to-DGE/schedule/links-to-lessons.html)
+
+:::
